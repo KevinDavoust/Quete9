@@ -1,0 +1,7 @@
+<h2>My kitten</h2>
+
+<div *ngFor="let adoptedKitten of adoptedKittenList">
+    <h2>{{adoptedKitten.name}} - {{ adoptedKitten.race }}</h2>
+    <p>{{ adoptedKitten.birthdate }}</p>
+    <img src="{{ adoptedKitten.image }}" alt="" width="120">
+</div>

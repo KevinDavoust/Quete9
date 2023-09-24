@@ -1,0 +1,18 @@
+<div *ngFor="let kitten of kittenList" class="kittencard">
+        <div *ngIf="kitten.isAdopted === false">
+                
+                
+                <div
+                (mouseenter)="showInfos = true"
+                (mouseleave)="showInfos = false">
+                        <img src="{{ kitten.image }}" alt="" width="120" class="kitten-img">
+                </div>
+                <div *ngIf="showInfos">
+                        <h2>{{kitten.name}} - {{ kitten.race }}</h2>
+                        <p>{{ kitten.birthdate }}</p>
+                </div>
+                <button (click)="adoptKitten(kitten)">Adopt</button>
+                
+        </div>
+        
+</div>
