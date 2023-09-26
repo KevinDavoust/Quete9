@@ -11,7 +11,7 @@ export class CocktailService {
   constructor(public http: HttpClient) { }
 
   getCocktails(): Observable<Cocktail[]> {
-    return this.http.get<Cocktail[]>("assets/data.json");
+    return this.http.get<Cocktail[]>("assets/cocktails.json");
     
   }
 }

@@ -16,7 +16,6 @@ export class CocktailListComponent {
   ngOnInit(): void {
     this.cocktailService.getCocktails().subscribe(cocktailsFromJsonFile => {
       this.cocktails = cocktailsFromJsonFile;
-      console.log(this.cocktails);
       
     });
   }
